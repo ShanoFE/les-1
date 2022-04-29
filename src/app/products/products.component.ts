@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
-import { Product } from './products.model';
+import { Component, OnInit } from '@angular/core';
+import { Product } from '../products.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.scss']
 })
+export class ProductsComponent implements OnInit {
 
-export class AppComponent {
-  title = 'Stage';
   productTitle: string = 'new new product';
   productPrice: number = 5;
   productSale: number = 7;
@@ -24,4 +23,10 @@ export class AppComponent {
       new Product(this.productTitle, this.productPrice, this.productSale)
     )
   }
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

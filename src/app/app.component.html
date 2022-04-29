@@ -1,16 +1,1 @@
-<div *ngFor="let product of products">
-  {{product.name}}
-  {{product.price}}
-  {{product.sale}}
-</div>
-
-<div class="form">
-  <div class="form-group">
-    <input type="text" name="titj" id="le" [ngModel]="productTitle">
-    <input type="number" name="titj" id="le" [ngModel]="productPrice">
-    <input type="number" name="titj" id="le" [ngModel]="productSale">
-  </div>
-</div>
-<div>
-  <button (click)="addProducts()">Add Products</button>
-</div>
+<app-products></app-products>
